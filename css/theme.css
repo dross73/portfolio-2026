@@ -1,0 +1,14 @@
+:root {
+  /* Core colors from the portfolio design */
+  --color-background: #f2e1c3;
+  --color-surface: #faedcc;
+  --color-text: #0b0b0a;
+  --color-dark-surface: #12120f;
+  --color-accent: #c2330e;
+  --color-orange: #e37d0a;
+  --color-olive: #474f1f;
+
+  /* Typography */
+  --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
