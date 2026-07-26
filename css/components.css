@@ -1,0 +1,100 @@
+.site-name {
+  font-family: var(--font-heading);
+  font-size: 2.505rem;
+  font-weight: 400;
+  line-height: 1.05;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-role {
+  color: var(--color-accent);
+  font-size: 1.0365rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.nav-list a {
+  display: block;
+  font-size: 0.864rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  text-decoration: underline;
+}
+
+.hero h1 {
+  width: 35.94rem;
+  font-family: var(--font-hero);
+  font-size: clamp(5rem, 8.333vw, 7.5rem);
+  font-weight: 900;
+  line-height: 0.883;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.hero h1 span {
+  display: block;
+}
+
+.hero-heading-accent {
+  margin-top: 1.25rem;
+  color: var(--color-accent);
+  line-height: 0.9;
+}
+
+.hero-description {
+  max-width: 29.37rem;
+  margin-top: 1.19rem;
+  font-size: 1.123rem;
+  font-weight: 700;
+  line-height: 1.335;
+}
+
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  color: var(--color-accent);
+  font-size: 1.0365rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.hero-link span {
+  font-size: inherit;
+}
+
+.hero-link:hover,
+.hero-link:focus-visible {
+  text-decoration: underline;
+}
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 669 / 619;
+  margin-top: -0.44rem;
+  overflow: hidden;
+  background-color: var(--color-dark-surface);
+}
+
+.hero-visual::before {
+  position: absolute;
+  top: 1.13%;
+  left: 13.75%;
+  width: 100.9%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  content: "";
+}

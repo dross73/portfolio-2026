@@ -9,6 +9,7 @@
   --color-olive: #474f1f;
 
   /* Typography */
-  --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: 'Anton', sans-serif;
+  --font-hero: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
 }

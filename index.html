@@ -8,7 +8,12 @@
       content="Portfolio for front-end and full-stack developer Dan Ross"
     />
     <title>Dan Ross | Front-End and Full-Stack Developer</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Big+Shoulders+Display:wght@900&family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
@@ -39,21 +44,23 @@
 
     <main id="main-content">
       <section class="hero" aria-labelledby="hero-heading">
-        <h1 id="hero-heading">
-          <span>Crafting</span>
-          <span>digital</span>
-          <span>experiences</span>
-          <span class="hero-heading-accent">that work.</span>
-        </h1>
-        <p class="hero-description">
-          I build accessible, responsive, and user-friendly web applications
-          with clean code and thoughtful design.
-        </p>
-
-        <a class="hero-link" href="#work">
-          View featured work
-          <span aria-hidden="true">→</span>
-        </a>
+        <div class="hero-content">
+          <h1 id="hero-heading">
+            <span>Crafting</span>
+            <span>digital</span>
+            <span>experiences</span>
+            <span class="hero-heading-accent">that work.</span>
+          </h1>
+          <p class="hero-description">
+            I build accessible, responsive, and user-friendly web applications
+            with clean code and thoughtful design.
+          </p>
+          <a class="hero-link" href="#work">
+            View featured work
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <div class="hero-visual" aria-hidden="true"></div>
       </section>
 
       <section class="page-section" id="work" aria-labelledby="work-heading">
