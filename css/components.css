@@ -85,16 +85,28 @@
   aspect-ratio: 669 / 619;
   margin-top: -0.44rem;
   overflow: hidden;
-  background-color: var(--color-dark-surface);
+  background-color: #eed9b5;
 }
 
 .hero-visual::before {
   position: absolute;
-  top: 1.13%;
-  left: 13.75%;
-  width: 100.9%;
+  top: 1%;
+  left: 15%;
+  width: 88%;
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: var(--color-accent);
   content: "";
+}
+
+.hero-image {
+  position: absolute;
+  right: -15px;
+  bottom: 0;
+  z-index: 1;
+  display: block;
+  width: 96%;
+  height: 96%;
+  object-fit: contain;
+  object-position: right bottom;
 }
