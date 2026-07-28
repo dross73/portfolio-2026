@@ -77,6 +77,14 @@
   border-right: 1px solid var(--color-text);
 }
 
+.hero .section-marker {
+  padding-top: 2.87rem;
+}
+
+.projects-section .section-marker {
+  padding-top: 1.5rem;
+}
+
 .section-marker-number {
   color: var(--color-accent);
   font-family: var(--font-heading);
@@ -174,6 +182,112 @@
   object-position: right bottom;
 }
 
+.projects-heading-row h2 {
+  font-family: var(--font-heading);
+  font-size: 1.555rem;
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.projects-archive-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-accent);
+  font-size: 0.864rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.projects-archive-link:hover,
+projects-archive-link:focus-visible {
+  text-decoration: underline;
+}
+
+.project-card {
+  overflow: hidden;
+  background-color: var(--color-surface);
+}
+
+.project-card-visual {
+  position: relative;
+  display: grid;
+  place-items: center;  
+  aspect-ratio: 378.67 / 229.42;
+  background-color: var(--color-olive);
+}
+
+.project-laptop {
+  display: block;
+  width: 80%;
+  height: auto;
+}
+
+.project-device {
+  position: relative;
+  width: 80%;
+}
+
+.project-device .project-laptop {
+  width: 100%;
+}
+
+.project-screen {
+  position: absolute;
+  top: 6.9%;
+  left: 12.8%;
+  width: 74.4%;
+  height: 71.8%;
+  object-fit: cover;
+}
+
+.project-card-visual--red {
+  background-color: var(--color-accent);
+}
+
+.project-card-visual--orange {
+  background-color: var(--color-orange);
+}
+
+.project-card-body {
+  padding: 0.85rem 1rem 1rem;
+}
+
+.project-card-body h3 {
+  font-family: var(--font-heading);
+  font-size: 1.38rem;
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.project-card-body p {
+  margin-top: 0.35rem;
+  font-size: 0.864rem;
+  line-height: 1.1;
+}
+
+.project-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  margin-top: 0.7rem;
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.project-card-cta:hover,
+.project-card-cta:focus-visible {
+  text-decoration: underline;
+}
+
 @media (max-width: 52rem) {
   .hero h1 {
     width: auto;
@@ -188,7 +302,11 @@
     padding-top: 0;
     padding-bottom: 0.3rem;
     border-right: 0;
-    border-bottom:1px solid var(--color-accent);
+    border-bottom: 1px solid var(--color-accent);
+  }
+
+  .hero .section-marker {
+    padding-top: 2.87rem;
   }
 
   .section-marker-number {

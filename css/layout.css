@@ -2,10 +2,10 @@
   display: grid;
   grid-template-columns: auto auto 1fr;
   align-items: center;
-  gap: 0.95rem;
+  gap: .95rem;
   width: min(calc(100% - 3.8rem), 85.17rem);
   margin-inline: auto;
-  padding-block: 1.55rem 0.82rem;
+  padding-block: 1.55rem .82rem;
   border-bottom: 1px solid var(--color-text);
 }
 
@@ -16,7 +16,7 @@
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 0.26rem;
+  gap: .26rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -29,20 +29,57 @@
 
 .hero {
   display: grid;
-  grid-template-columns: 5.75rem minmax(0, 35.95rem) minmax(0, 41.81rem);
+  grid-template-columns: 5.75rem minmax(0, 1fr);
   align-items: start;
-  column-gap: 0.83rem;
+  column-gap: .83rem;
   width: min(calc(100% - 3.8rem), 85.17rem);
   margin-inline: auto;
+}
+
+.hero-main {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 35.95rem)
+    minmax(0, 41.81rem);
+  align-items: start;
+  column-gap: .83rem;
   padding: 2.87rem 0 2.4rem;
+}
+
+.projects-section {
+  display: grid;
+  grid-template-columns: 5.75rem minmax(0, 1fr);
+  column-gap: .83rem;
+  width: min(calc(100% - 3.8rem), 85.17rem);
+  margin-inline: auto;
+  border-top: 1px solid var(--color-text);
+  border-bottom: 1px solid var(--color-text);
+}
+
+.projects-content {
+  padding-block: 1.5rem;
+}
+
+.projects-heading-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
 }
 
 @media (max-width: 52rem) {
   .site-header {
     grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 0.75rem;
+    gap: .75rem;
     width: calc(100% - 2rem);
-    padding-block: 1.25rem 0.9rem;
+    padding-block: 1.25rem .9rem;
   }
 
   .hero {
@@ -50,6 +87,21 @@
     row-gap: 2rem;
     width: calc(100% - 2rem);
     padding: 2rem 0 2.5rem;
+  }
+
+  .hero-main {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    padding: 0;
+  }
+
+  .projects-section {
+    grid-template-columns: 1fr;
+    width: calc(100% - 2rem);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 
   .site-role {
@@ -90,8 +142,8 @@
   .nav-list {
     flex-direction: column;
     align-items: stretch;
-    gap: 0.25rem;
-    padding-block: 1rem 0.5rem;
+    gap: .25rem;
+    padding-block: 1rem .5rem;
   }
 
   .nav-list li {
@@ -100,6 +152,6 @@
   }
 
   .nav-list a {
-    padding-block: 0.4rem;
+    padding-block: .4rem;
   }
 }
