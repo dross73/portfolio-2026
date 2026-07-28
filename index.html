@@ -30,7 +30,20 @@
       <a class="site-name" href="index.html">Dan Ross</a>
       <p class="site-role">Front-End Developer</p>
 
-      <nav aria-label="Primary navigation">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation"
+      >
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+
+      </button>
+
+      <nav id="primary-navigation" aria-label="Primary navigation">
         <ul class="nav-list">
           <li><a href="#work">Work</a></li>
           <li><a href="#experience">Experience</a></li>

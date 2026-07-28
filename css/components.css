@@ -29,6 +29,26 @@
   text-decoration: underline;
 }
 
+.nav-toggle {
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.5rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-toggle-line {
+  display: block;
+  width: 100%;
+  height: 0.16rem;
+  background-color: currentColor;
+}
+.nav-toggle-line + .nav-toggle-line {
+  margin-top: 0.35rem;
+}
+
 .hero h1 {
   width: 35.94rem;
   font-family: var(--font-hero);
@@ -96,7 +116,7 @@
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: var(--color-accent);
-  content: "";
+  content: '';
 }
 
 .hero-image {
