@@ -1,3 +1,21 @@
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-text);
+  color: var(--color-background);
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(calc(-100% - 1rem));
+  transition: transform 150ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
 .site-name {
   font-family: var(--font-heading);
   font-size: 2.505rem;
@@ -47,6 +65,31 @@
 }
 .nav-toggle-line + .nav-toggle-line {
   margin-top: 0.35rem;
+}
+
+.section-marker {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  border-right: 1px solid var(--color-text);
+}
+
+.section-marker-number {
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 2.16rem;
+  line-height: 1;
+}
+
+.section-marker-label {
+  font-size: 1.12rem;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
 }
 
 .hero h1 {
@@ -129,4 +172,31 @@
   height: 96%;
   object-fit: contain;
   object-position: right bottom;
+}
+
+@media (max-width: 52rem) {
+  .hero h1 {
+    width: auto;
+    font-size: clamp(3.25rem, 16vw, 5rem);
+  }
+
+  .section-marker {
+    width: max-content;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0.3rem;
+    border-right: 0;
+    border-bottom:1px solid var(--color-accent);
+  }
+
+  .section-marker-number {
+    font-size: 1.65rem;
+  }
+
+  .section-marker-label {
+    font-size: 1rem;
+    writing-mode: horizontal-tb;
+  }
 }

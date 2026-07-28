@@ -29,12 +29,12 @@
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 35.94rem) minmax(0, 41.81rem);
+  grid-template-columns: 5.75rem minmax(0, 35.95rem) minmax(0, 41.81rem);
   align-items: start;
   column-gap: 0.83rem;
   width: min(calc(100% - 3.8rem), 85.17rem);
   margin-inline: auto;
-  padding: 2.87rem 0 2.4rem 6.58rem;
+  padding: 2.87rem 0 2.4rem;
 }
 
 @media (max-width: 52rem) {
@@ -43,6 +43,13 @@
     gap: 0.75rem;
     width: calc(100% - 2rem);
     padding-block: 1.25rem 0.9rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    width: calc(100% - 2rem);
+    padding: 2rem 0 2.5rem;
   }
 
   .site-role {
