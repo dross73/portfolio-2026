@@ -90,6 +90,11 @@
   padding-top: 2rem;
 }
 
+.vault-section .section-marker,
+.about-section .section-marker {
+  padding-top: 1rem;
+}
+
 .section-marker-number {
   color: var(--color-accent);
   font-family: var(--font-heading);
@@ -405,6 +410,211 @@
   border-bottom: 1px solid var(--color-text);
 }
 
+
+/* Vault and About */
+.vault-copy,
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.vault-copy {
+  padding-block: 0.75rem 1rem;
+}
+
+.vault-intro,
+.about-intro {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.vault-intro {
+  font-size: clamp(2rem, 2.7vw, 2.42rem);
+}
+
+.about-intro {
+  font-size: clamp(1.85rem, 2.4vw, 2.16rem);
+}
+
+.vault-link {
+  margin-top: auto;
+}
+
+.about-description {
+  max-width: 21.6rem;
+  margin-top: 0.55rem;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.about-link {
+  margin-top: 1.75rem;
+}
+
+.vault-media-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 13.13rem;
+  padding: 1rem;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 12%,
+      rgb(250 237 204 / 20%) 12% 13%,
+      transparent 13% 22%
+    ),
+    var(--color-dark-surface);
+  color: var(--color-surface);
+  text-align: center;
+}
+
+.vault-media-placeholder span,
+.about-portrait-placeholder span {
+  position: relative;
+  z-index: 2;
+  max-width: 8rem;
+  font-size: 0.69rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.about-portrait-placeholder {
+  position: relative;
+  display: grid;
+  place-items: start center;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: var(--color-olive);
+  color: var(--color-surface);
+}
+
+.about-portrait-placeholder::before {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  width: 36%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #ba9466;
+  content: '';
+  transform: translateX(-50%);
+}
+
+.about-portrait-placeholder::after {
+  position: absolute;
+  right: 3%;
+  bottom: -2%;
+  left: 3%;
+  height: 40%;
+  border-radius: 50% 50% 0 0;
+  background-color: var(--color-dark-surface);
+  content: '';
+}
+
+.about-portrait-placeholder span {
+  margin-top: 0.8rem;
+}
+
+/* Contact and footer */
+.contact-cta h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 2.94rem);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.contact-cta h2 span {
+  display: block;
+}
+
+.contact-cta h2 span:last-child {
+  color: var(--color-accent);
+}
+
+.contact-link {
+  margin-top: 1rem;
+}
+
+.contact-arc {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      var(--color-dark-surface) 0 17%,
+      var(--color-orange) 17% 30%,
+      #d39316 30% 43%,
+      var(--color-olive) 43% 58%,
+      transparent 58%
+    );
+}
+
+.contact-details {
+  font-style: normal;
+}
+
+.contact-details ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-details li {
+  display: grid;
+  grid-template-columns: 0.7rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.864rem;
+  line-height: 1.2;
+}
+
+.contact-details li + li {
+  margin-top: 0.75rem;
+}
+
+.contact-detail-mark {
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+}
+
+.contact-details a {
+  width: max-content;
+  max-width: 100%;
+  color: inherit;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.contact-details a:hover,
+.contact-details a:focus-visible {
+  text-decoration: underline;
+}
+
+.contact-tagline {
+  font-family: var(--font-heading);
+  font-size: 1.64rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.site-footer {
+  background-color: var(--color-dark-surface);
+  color: var(--color-orange);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
 @media (max-width: 52rem) {
   .hero h1 {
     width: auto;
@@ -424,6 +634,38 @@
 
   .hero .section-marker {
     padding-top: 2.87rem;
+  }
+
+  .vault-section .section-marker,
+  .about-section .section-marker {
+    padding-top: 0;
+  }
+
+  .vault-copy,
+  .about-copy {
+    padding-block: 0;
+  }
+
+  .vault-link,
+  .about-link {
+    margin-top: 1.5rem;
+  }
+
+  .vault-media-placeholder {
+    min-height: 15rem;
+  }
+
+  .about-portrait-placeholder {
+    justify-self: center;
+    width: min(18rem, 100%);
+  }
+
+  .contact-cta h2 {
+    font-size: clamp(2.5rem, 13vw, 3.8rem);
+  }
+
+  .contact-tagline {
+    font-size: 2rem;
   }
 
   .section-marker-number {

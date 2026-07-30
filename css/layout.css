@@ -124,6 +124,70 @@
   list-style: none;
 }
 
+
+/* Vault, About, Contact, and footer */
+.vault-about-row {
+  display: grid;
+  grid-template-columns: minmax(0, 46fr) minmax(0, 54fr);
+  width: min(calc(100% - 3.8rem), 85.17rem);
+  margin-inline: auto;
+  border-bottom: 1px solid var(--color-text);
+}
+
+.vault-section,
+.about-section {
+  display: grid;
+  grid-template-columns: 5.75rem minmax(0, 1fr);
+  column-gap: 0.83rem;
+}
+
+.vault-about-row > .page-section + .page-section {
+  border-left: 1px solid var(--color-text);
+}
+
+.vault-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(10rem, 40%);
+  gap: 1.25rem;
+  min-height: 16.93rem;
+  padding: 1rem 0.75rem 1rem 0;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(10rem, 44%);
+  align-items: center;
+  gap: 1rem;
+  min-height: 16.93rem;
+  padding: 0.75rem 1rem 0.75rem 0;
+}
+
+.contact-section {
+  width: min(calc(100% - 3.8rem), 85.17rem);
+  margin-inline: auto;
+  padding: 2rem 1.5rem 1.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 2fr)
+    minmax(0, 1.25fr)
+    minmax(0, 1.35fr)
+    minmax(8rem, 0.7fr);
+  align-items: end;
+  gap: 2rem;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(calc(100% - 3.8rem), 85.17rem);
+  margin-inline: auto;
+  padding: 0.75rem 1.5rem;
+}
 @media (max-width: 52rem) {
   .site-header {
     grid-template-columns: auto minmax(0, 1fr) auto;
@@ -178,6 +242,51 @@
 
   .lab-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vault-about-row {
+    grid-template-columns: 1fr;
+    width: calc(100% - 2rem);
+  }
+
+  .vault-section,
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .vault-content,
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    min-height: 0;
+    padding: 1.5rem 0 2rem;
+  }
+
+  .vault-about-row > .page-section + .page-section {
+    border-top: 1px solid var(--color-text);
+    border-left: 0;
+  }
+
+  .contact-section {
+    width: calc(100% - 2rem);
+    padding: 2rem 0 1.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 1.75rem;
+  }
+
+  .contact-arc {
+    justify-self: center;
+    width: min(100%, 28rem);
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    width: calc(100% - 2rem);
   }
 
   .lab-card:nth-child(2n) {

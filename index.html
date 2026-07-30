@@ -383,32 +383,155 @@
         </section>
       </div>
 
-      <section
-        class="page-section"
-        id="archive"
-        aria-labelledby="archive-heading"
-      >
-        <h2 id="archive-heading">From the Vault</h2>
-        <p>Selected earlier projects will go here.</p>
-      </section>
+      <!-- Vault and About share one editorial row on desktop. -->
+      <div class="vault-about-row">
+        <section
+          class="page-section vault-section"
+          id="archive"
+          aria-labelledby="archive-heading"
+        >
+          <div class="section-marker">
+            <span class="section-marker-number" aria-hidden="true">05</span>
 
-      <section class="page-section" id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">About</h2>
-        <p>Background, skills, and a little about me will go here.</p>
-      </section>
+            <h2 id="archive-heading" class="section-marker-label">
+              From the Vault
+            </h2>
+          </div>
+
+          <div class="vault-content">
+            <div class="vault-copy">
+              <p class="vault-intro">
+                Older projects.<br />
+                Still worth a look.
+              </p>
+
+              <a class="action-link vault-link" href="#">
+                Browse the vault
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div
+              class="vault-media-placeholder"
+              role="img"
+              aria-label="Placeholder for a future vintage audio image"
+            >
+              <span>Vault image placeholder</span>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="page-section about-section"
+          id="about"
+          aria-labelledby="about-heading"
+        >
+          <div class="section-marker">
+            <span class="section-marker-number" aria-hidden="true">06</span>
+
+            <h2 id="about-heading" class="section-marker-label">
+              About Me
+            </h2>
+          </div>
+
+          <div class="about-content">
+            <div class="about-copy">
+              <p class="about-intro">
+                I like clean code,<br />
+                good design, and<br />
+                old records.
+              </p>
+
+              <p class="about-description">
+                When I'm not coding, you'll probably find me sharpening knives,
+                listening to vinyl, or out for a long walk.
+              </p>
+
+              <a class="action-link about-link" href="#">
+                More about me
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div
+              class="about-portrait-placeholder"
+              role="img"
+              aria-label="Placeholder for a future portrait"
+            >
+              <span>Portrait placeholder</span>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <section
-        class="page-section"
+        class="contact-section"
         id="contact"
         aria-labelledby="contact-heading"
       >
-        <h2 id="contact-heading">Contact</h2>
-        <p>Contact details and professional links will go here.</p>
+        <div class="contact-grid">
+          <div class="contact-cta">
+            <h2 id="contact-heading">
+              <span>Let's build</span>
+              <span>something great.</span>
+            </h2>
+
+            <!-- Replace placeholder contact details before launch. -->
+            <a
+              class="action-link contact-link"
+              href="mailto:hello@danross.dev"
+            >
+              Get in touch
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="contact-arc" aria-hidden="true"></div>
+
+          <address class="contact-details">
+            <ul>
+              <li>
+                <span class="contact-detail-mark" aria-hidden="true"></span>
+                <a href="mailto:hello@danross.dev">hello@danross.dev</a>
+              </li>
+
+              <li>
+                <span class="contact-detail-mark" aria-hidden="true"></span>
+                <span>Story City, Iowa</span>
+              </li>
+
+              <li>
+                <span class="contact-detail-mark" aria-hidden="true"></span>
+                <span>danross.dev</span>
+              </li>
+
+              <li>
+                <span class="contact-detail-mark" aria-hidden="true"></span>
+                <a href="https://github.com/dross73">
+                  github.com/dross73
+                </a>
+              </li>
+
+              <li>
+                <span class="contact-detail-mark" aria-hidden="true"></span>
+                <span>LinkedIn</span>
+              </li>
+            </ul>
+          </address>
+
+          <p class="contact-tagline">
+            Simple.<br />
+            Focused.<br />
+            Effective.<br />
+            Timeless.
+          </p>
+        </div>
       </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p>&copy; 2026 Dan Ross</p>
+      <p>Built with HTML, CSS &amp; Coffee</p>
     </footer>
   </body>
 </html>
