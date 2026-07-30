@@ -20,3 +20,7 @@ a {
   outline: 0.2rem solid currentColor;
   outline-offset: 0.2rem;
 }
+
+.no-wrap {
+  white-space: nowrap;
+}

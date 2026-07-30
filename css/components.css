@@ -85,6 +85,10 @@
   padding-top: 1.5rem;
 }
 
+.experience-section .section-marker {
+  padding-top: 2rem;
+}
+
 .section-marker-number {
   color: var(--color-accent);
   font-family: var(--font-heading);
@@ -203,7 +207,7 @@
 }
 
 .projects-archive-link:hover,
-projects-archive-link:focus-visible {
+.projects-archive-link:focus-visible {
   text-decoration: underline;
 }
 
@@ -215,7 +219,7 @@ projects-archive-link:focus-visible {
 .project-card-visual {
   position: relative;
   display: grid;
-  place-items: center;  
+  place-items: center;
   aspect-ratio: 378.67 / 229.42;
   background-color: var(--color-olive);
 }
@@ -270,11 +274,10 @@ projects-archive-link:focus-visible {
   line-height: 1.1;
 }
 
-.project-card-cta {
+.action-link {
   display: inline-flex;
   align-items: center;
   gap: 0.35em;
-  margin-top: 0.7rem;
   color: var(--color-accent);
   font-size: 0.78rem;
   font-weight: 700;
@@ -283,9 +286,70 @@ projects-archive-link:focus-visible {
   text-transform: uppercase;
 }
 
-.project-card-cta:hover,
-.project-card-cta:focus-visible {
+.project-card-cta {
+  margin-top: 0.7rem;
+}
+
+.experience-summary {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.experience-link {
+  width: max-content;
+  margin-top: auto;
+}
+
+.action-link:hover,
+.action-link:focus-visible {
   text-decoration: underline;
+}
+
+.experience-intro {
+  max-width: 19rem;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 2.68rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.experience-description {
+  max-width: 22.46rem;
+  margin-top: 1.44rem;
+  font-size: 0.864rem;
+  line-height: 1.35;
+}
+
+.experience-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-item {
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--color-text);
+}
+
+.experience-item-heading h3 {
+  color: var(--color-accent);
+  font-size: 0.864rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.experience-item-heading p {
+  margin-top: 0.44rem;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.experience-dates {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 @media (max-width: 52rem) {
