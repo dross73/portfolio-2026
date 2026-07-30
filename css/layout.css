@@ -99,6 +99,31 @@
   border-left: 1px solid var(--color-text);
 }
 
+.lab-section {
+  display: grid;
+  grid-template-columns: 5.75rem minmax(0, 1fr);
+  column-gap: 0.83rem;
+}
+
+.lab-content {
+  padding: 2rem 1.5rem 2rem 0;
+}
+
+.lab-heading-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
 @media (max-width: 52rem) {
   .site-header {
     grid-template-columns: auto minmax(0, 1fr) auto;
@@ -141,6 +166,30 @@
   .experience-content {
     grid-template-columns: 1fr;
     padding: 1.5rem 0 2rem;
+  }
+
+  .lab-section {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-content {
+    padding: 1.5rem 0 2rem;
+  }
+
+  .lab-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lab-card:nth-child(2n) {
+    border-right: 1px solid var(--color-text);
+  }
+
+  .lab-card:nth-last-child(-n + 4) {
+    border-bottom: 0;
+  }
+
+  .lab-card:nth-last-child(-n + 2) {
+    border-bottom: 1px solid var(--color-text);
   }
 
   .experience-lab-row > .page-section + .page-section {

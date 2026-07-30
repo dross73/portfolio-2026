@@ -1,0 +1,37 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+>
+  <path
+    d="
+      M32 5
+      L56 14
+      L52 47
+      L32 59
+      L12 47
+      L8 14
+      Z
+    "
+    fill="#d39316"
+  />
+
+  <path
+    d="
+      M32 16
+      L20 47
+      H27
+      L29.5 40
+      H34.5
+      L37 47
+      H44
+      Z
+
+      M32 27
+      L34 34
+      H30
+      Z
+    "
+    fill="#faedcc"
+    fill-rule="evenodd"
+  />
+</svg>

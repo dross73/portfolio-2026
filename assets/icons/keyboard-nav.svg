@@ -1,0 +1,46 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+>
+  <circle
+    cx="32"
+    cy="32"
+    r="30"
+    fill="#474f1f"
+  />
+
+  <rect
+    x="13"
+    y="24"
+    width="38"
+    height="25"
+    rx="3"
+    fill="none"
+    stroke="#faedcc"
+    stroke-width="3"
+  />
+
+  <g fill="#faedcc">
+    <rect x="18" y="29" width="4" height="4" rx="0.5" />
+    <rect x="24" y="29" width="4" height="4" rx="0.5" />
+    <rect x="30" y="29" width="4" height="4" rx="0.5" />
+    <rect x="36" y="29" width="4" height="4" rx="0.5" />
+    <rect x="42" y="29" width="4" height="4" rx="0.5" />
+
+    <rect x="18" y="35" width="4" height="4" rx="0.5" />
+    <rect x="24" y="35" width="4" height="4" rx="0.5" />
+    <rect x="30" y="35" width="4" height="4" rx="0.5" />
+    <rect x="36" y="35" width="4" height="4" rx="0.5" />
+    <rect x="42" y="35" width="4" height="4" rx="0.5" />
+
+    <rect x="22" y="41" width="20" height="4" rx="1" />
+  </g>
+
+  <path
+    d="M39 24C39 18 42 15 48 15"
+    fill="none"
+    stroke="#faedcc"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+</svg>
