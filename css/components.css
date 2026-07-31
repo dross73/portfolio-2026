@@ -410,7 +410,6 @@
   border-bottom: 1px solid var(--color-text);
 }
 
-
 /* Vault and About */
 .vault-copy,
 .about-copy {
@@ -525,9 +524,9 @@
 /* Contact and footer */
 .contact-cta h2 {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 4vw, 2.94rem);
+  font-size: 2.9368rem;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.043;
   text-transform: uppercase;
 }
 
@@ -537,6 +536,7 @@
 
 .contact-cta h2 span:last-child {
   color: var(--color-accent);
+  white-space: nowrap;
 }
 
 .contact-link {
@@ -544,17 +544,15 @@
 }
 
 .contact-arc {
+  align-self: end;
+  justify-self: center;
+  display: block;
   width: 100%;
-  aspect-ratio: 2 / 1;
-  background:
-    radial-gradient(
-      ellipse at 50% 100%,
-      var(--color-dark-surface) 0 17%,
-      var(--color-orange) 17% 30%,
-      #d39316 30% 43%,
-      var(--color-olive) 43% 58%,
-      transparent 58%
-    );
+  height: 12.75rem;
+  object-fit: contain;
+  object-position: center bottom;
+  margin: 0;
+  transform: none;
 }
 
 .contact-details {
@@ -608,6 +606,8 @@
 }
 
 .site-footer {
+  position: relative;
+  z-index: 1;
   background-color: var(--color-dark-surface);
   color: var(--color-orange);
   font-size: 0.78rem;
@@ -615,6 +615,7 @@
   line-height: 1.05;
   text-transform: uppercase;
 }
+
 @media (max-width: 52rem) {
   .hero h1 {
     width: auto;
@@ -666,6 +667,10 @@
 
   .contact-tagline {
     font-size: 2rem;
+  }
+
+  .contact-arc {
+    height: auto;
   }
 
   .section-marker-number {

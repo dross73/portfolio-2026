@@ -1,0 +1,46 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="40 0 520 300"
+>
+  <!-- Olive band -->
+  <path
+    d="M40 300A260 260 0 0 1 560 300H40Z"
+    fill="#998345"
+  />
+
+  <!-- Thin cream separator -->
+  <path
+    d="M81 300A219 219 0 0 1 519 300H81Z"
+    fill="#f2e1c3"
+  />
+
+  <!-- Gold band -->
+  <path
+    d="M84 300A216 216 0 0 1 516 300H84Z"
+    fill="#d4901a"
+  />
+
+  <!-- Thin cream separator -->
+  <path
+    d="M125 300A175 175 0 0 1 475 300H125Z"
+    fill="#f2e1c3"
+  />
+
+  <!-- Orange band -->
+  <path
+    d="M128 300A172 172 0 0 1 472 300H128Z"
+    fill="#be4d1a"
+  />
+
+  <!-- Thin cream separator -->
+  <path
+    d="M169 300A131 131 0 0 1 431 300H169Z"
+    fill="#f2e1c3"
+  />
+
+  <!-- Dark center -->
+  <path
+    d="M172 300A128 128 0 0 1 428 300H172Z"
+    fill="#151514"
+  />
+</svg>
