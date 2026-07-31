@@ -23,7 +23,7 @@
     <script src="js/main.js" defer></script>
   </head>
 
-  <body>
+  <body id="top">
     <a class="skip-link" href="#main-content"> Skip to main content </a>
 
     <header class="site-header">
@@ -114,15 +114,15 @@
 
                   <img
                     class="project-screen"
-                    src="assets/images/sample-thumbnail-1600x900.png"
+                    src="assets/images/RealEstate.png"
                     alt=""
                   />
                 </div>
               </div>
 
               <div class="project-card-body">
-                <h3>Project One</h3>
-                <p>Technology / Technology / Technology</p>
+                <h3>Real Estate Admin</h3>
+                <p>Angular / FastAPI / PostgreSQL</p>
 
                 <a class="action-link project-card-cta" href="#">
                   View case study
@@ -136,16 +136,23 @@
                 class="project-card-visual project-card-visual--red"
                 aria-hidden="true"
               >
-                <img
-                  class="project-laptop"
-                  src="assets/images/laptop.png"
-                  alt=""
-                />
+                <div class="project-device">
+                  <img
+                    class="project-laptop"
+                    src="assets/images/laptop.png"
+                    alt=""
+                  />
+                  <img
+                    class="project-screen"
+                    src="assets/images/dan-portfolio.png"
+                    alt=""
+                  />
+                </div>
               </div>
 
               <div class="project-card-body">
-                <h3>Project Two</h3>
-                <p>Technology / Technology / Technology</p>
+                <h3>Dan Ross Portfolio</h3>
+                <p>HTML / CSS / JavaScript / Accessibility</p>
 
                 <a class="action-link project-card-cta" href="#">
                   View case study
@@ -159,16 +166,23 @@
                 class="project-card-visual project-card-visual--orange"
                 aria-hidden="true"
               >
-                <img
-                  class="project-laptop"
-                  src="assets/images/laptop.png"
-                  alt=""
-                />
+                <div class="project-device">
+                  <img
+                    class="project-laptop"
+                    src="assets/images/laptop.png"
+                    alt=""
+                  />
+                  <img
+                    class="project-screen"
+                    src="assets/images/jmc.png"
+                    alt=""
+                  />
+                </div>
               </div>
 
               <div class="project-card-body">
-                <h3>Project Three</h3>
-                <p>Technology / Technology / Technology</p>
+                <h3>Josephson Manufacturing</h3>
+                <p>Angular / Node.js / MongoDB / AWS</p>
 
                 <a class="action-link project-card-cta" href="#">
                   View case study
@@ -411,12 +425,15 @@
               </a>
             </div>
 
-            <div
-              class="vault-media-placeholder"
-              role="img"
-              aria-label="Placeholder for a future vintage audio image"
-            >
-              <span>Vault image placeholder</span>
+            <div class="vault-media">
+              <img
+                class="vault-image"
+                src="assets/images/card-catalog.png"
+                alt=""
+                width="971"
+                height="1619"
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
@@ -437,12 +454,12 @@
               <p class="about-intro">
                 I like clean code,<br />
                 good design, and<br />
-                old records.
+                sharp edges.
               </p>
 
               <p class="about-description">
                 When I'm not coding, you'll probably find me sharpening knives,
-                listening to vinyl, or out for a long walk.
+                playing drums, or out for a long walk.
               </p>
 
               <a class="action-link about-link" href="#">
@@ -475,7 +492,7 @@
             </h2>
 
             <!-- Replace placeholder contact details before launch. -->
-            <a class="action-link contact-link" href="mailto:hello@danross.dev">
+            <a class="action-link contact-link" href="mailto:dan@dan-ross.dev">
               Get in touch
               <span aria-hidden="true">→</span>
             </a>
@@ -492,28 +509,64 @@
           <address class="contact-details">
             <ul>
               <li>
-                <span class="contact-detail-mark" aria-hidden="true"></span>
-                <a href="mailto:hello@danross.dev">hello@danross.dev</a>
+                <img
+                  class="contact-detail-icon"
+                  src="assets/icons/contact-email.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
+                <a href="mailto:dan@dan-ross.dev">dan@dan-ross.dev</a>
               </li>
 
               <li>
-                <span class="contact-detail-mark" aria-hidden="true"></span>
+                <img
+                  class="contact-detail-icon"
+                  src="assets/icons/contact-location.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
                 <span>Story City, Iowa</span>
               </li>
 
               <li>
-                <span class="contact-detail-mark" aria-hidden="true"></span>
-                <span>danross.dev</span>
+                <img
+                  class="contact-detail-icon"
+                  src="assets/icons/contact-website.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
+                <a href="https://dan-ross.dev" target="_blank">dan-ross.dev</a>
               </li>
 
               <li>
-                <span class="contact-detail-mark" aria-hidden="true"></span>
-                <a href="https://github.com/dross73"> github.com/dross73 </a>
+                <img
+                  class="contact-detail-icon"
+                  src="assets/icons/contact-github.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
+                <a href="https://github.com/dross73" target="_blank">
+                  github.com/dross73
+                </a>
               </li>
 
               <li>
-                <span class="contact-detail-mark" aria-hidden="true"></span>
-                <span>LinkedIn</span>
+                <img
+                  class="contact-detail-icon"
+                  src="assets/icons/contact-linkedin.svg"
+                  alt=""
+                  width="24"
+                  height="24"
+                />
+                <a
+                  href="https://www.linkedin.com/in/dan-ross-dev/"
+                  target="_blank"
+                  >LinkedIn</a
+                >
               </li>
             </ul>
           </address>
@@ -532,5 +585,9 @@
       <p>&copy; 2026 Dan Ross</p>
       <p>Built with HTML, CSS &amp; Coffee</p>
     </footer>
+
+    <a class="back-to-top" href="#top" aria-label="Back to top">
+      <span aria-hidden="true">↑</span>
+    </a>
   </body>
 </html>

@@ -29,3 +29,25 @@ if (navToggle && primaryNavigation) {
     }
   });
 }
+
+// Prevent unfinished links from jumping to the top of the page.
+const comingSoonLinks = document.querySelectorAll('a[href="#"]');
+
+comingSoonLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    window.alert('Coming soon.');
+  });
+});
+
+// Show the back-to-top link after the visitor scrolls down.
+const backToTopLink = document.querySelector('.back-to-top');
+
+const updateBackToTopVisibility = () => {
+  backToTopLink.classList.toggle('is-visible', window.scrollY > 500);
+};
+
+window.addEventListener('scroll', updateBackToTopVisibility);
+
+updateBackToTopVisibility();
