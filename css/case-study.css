@@ -1,0 +1,120 @@
+/* Shared layout for portfolio case-study pages. */
+.case-study-hero {
+  display: grid;
+  grid-template-columns: 5.75rem minmax(0, 1fr);
+  column-gap: 0.83rem;
+  width: min(calc(100% - 3.8rem), 85.17rem);
+  margin-inline: auto;
+  border-bottom: 1px solid var(--color-text);
+}
+
+.case-study-hero .section-marker {
+  padding-top: 2.5rem;
+}
+
+.case-study-hero-main {
+  display: grid;
+  grid-template-columns:
+    minmax(18rem, 0.9fr)
+    minmax(0, 1.1fr);
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.5rem 0 3rem;
+}
+
+.case-study-hero-copy {
+  min-width: 0;
+}
+
+.case-study-back-link {
+  margin-bottom: 2.5rem;
+}
+
+.case-study-eyebrow {
+  margin-bottom: 0.75rem;
+  color: var(--color-accent-text);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.case-study-hero h1 {
+  font-family: var(--font-hero);
+  font-size: clamp(4.5rem, 7.5vw, 7rem);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.case-study-hero h1 span {
+  display: block;
+}
+
+.case-study-heading-accent {
+  color: var(--color-accent);
+}
+
+.case-study-summary {
+  max-width: 34rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.case-study-stack {
+  margin-top: 1.5rem;
+  color: var(--color-accent-text);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.case-study-hero-visual {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 3rem);
+  background-color: var(--color-olive);
+  background-image: url('../assets/textures/print-grain.png');
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+.case-study-hero-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-text);
+}
+
+@media (max-width: 56rem) {
+  .case-study-hero {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    width: calc(100% - 2rem);
+    padding: 2rem 0 2.5rem;
+  }
+
+  .case-study-hero .section-marker {
+    padding-top: 0;
+  }
+
+  .case-study-hero-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .case-study-back-link {
+    margin-bottom: 2rem;
+  }
+
+  .case-study-hero h1 {
+    font-size: clamp(4rem, 16vw, 6rem);
+  }
+}
