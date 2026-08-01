@@ -177,6 +177,9 @@
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: var(--color-accent);
+  background-image: url('../assets/textures/print-grain.png');
+  background-repeat: repeat;
+  background-size: 256px 256px;
   content: '';
 }
 
@@ -231,6 +234,16 @@
   background-color: var(--color-olive);
 }
 
+.project-card-visual::before {
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/textures/print-grain.png');
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  content: '';
+  pointer-events: none;
+}
+
 .project-laptop {
   display: block;
   width: 80%;
@@ -239,6 +252,7 @@
 
 .project-device {
   position: relative;
+  z-index: 1;
   width: 80%;
 }
 
@@ -494,7 +508,6 @@
 
 .contact-cta h2 span:last-child {
   color: var(--color-accent);
-  white-space: nowrap;
 }
 
 .contact-link {
@@ -605,7 +618,26 @@
   pointer-events: auto;
 }
 
-@media (max-width: 52rem) {
+/* Update Lab borders when the grid changes from four to two columns. */
+@media (max-width: 64rem) {
+  .lab-card:nth-child(4n) {
+    border-right: 0;
+  }
+
+  .lab-card:nth-child(2n) {
+    border-right: 1px solid var(--color-text);
+  }
+
+  .lab-card:nth-last-child(-n + 4) {
+    border-bottom: 0;
+  }
+
+  .lab-card:nth-last-child(-n + 2) {
+    border-bottom: 1px solid var(--color-text);
+  }
+}
+
+@media (max-width: 56rem) {
   .hero h1 {
     width: auto;
     font-size: clamp(3.25rem, 16vw, 5rem);
