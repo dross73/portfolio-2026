@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Case study for the Real Estate Admin application built by Dan Ross"
+      content="Case study for the Josephson Manufacturing website built by Dan Ross"
     />
-    <title>Real Estate Admin Case Study | Dan Ross</title>
+    <title>Josephson Manufacturing Case Study | Dan Ross</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +24,7 @@
     <script src="../js/main.js" defer></script>
   </head>
 
-  <body id="top" class="case-study-page">
+  <body id="top" class="case-study-page case-study-page--orange">
 
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
@@ -73,26 +73,28 @@
               Back to selected projects
             </a>
 
-            <p class="case-study-eyebrow">Full-Stack Application</p>
+            <p class="case-study-eyebrow">Client Full-Stack Website</p>
 
-            <h1 id="case-study-heading">
-              <span>Real Estate</span>
-              <span class="case-study-heading-accent">Admin</span>
+            <h1 class="case-study-title-long" id="case-study-heading">
+              <span>Josephson</span>
+              <span class="case-study-heading-accent">Manufacturing</span>
             </h1>
 
             <p class="case-study-summary">
-              A full-stack real estate management application with authenticated
-              administration, listing management, user roles, responsive
-              interfaces, and accessibility-focused form workflows.
+              A manufacturing website designed around a simple public
+              experience and a focused administrative system for the content
+              that needed regular updates.
             </p>
 
-            <p class="case-study-stack">Angular / FastAPI / PostgreSQL</p>
+            <p class="case-study-stack">
+              Angular / Node.js / MongoDB / AWS
+            </p>
           </div>
 
           <figure class="case-study-hero-visual">
             <img
-              src="../assets/images/RealEstate.png"
-              alt="Real Estate Admin interface showing property management tools"
+              src="../assets/images/jmc.png"
+              alt="Josephson Manufacturing website"
               width="1920"
               height="1080"
             />
@@ -111,14 +113,14 @@
             <div>
               <p class="case-study-kicker">Project Overview</p>
               <h2 class="case-study-section-title" id="overview-heading">
-                Proving the complete data flow
+                Simple for visitors and maintainers
               </h2>
             </div>
 
             <p class="case-study-lead">
-              I built this project to demonstrate how a modern Angular
-              administration interface connects to a FastAPI API, authentication
-              layer, and PostgreSQL database.
+              The project was designed for a radiator manufacturing company that
+              needed a straightforward website and control over two sections
+              that changed more frequently.
             </p>
           </div>
 
@@ -129,32 +131,22 @@
             </div>
             <div>
               <dt>Status</dt>
-              <dd>Actively in development</dd>
+              <dd>Archived client build</dd>
             </div>
             <div>
               <dt>Primary focus</dt>
-              <dd>Admin workflows, authentication, and accessibility</dd>
+              <dd>Focused content management and cloud deployment</dd>
             </div>
           </dl>
 
           <div class="case-study-links">
             <a
               class="action-link"
-              href="https://github.com/dross73/real_estate_project"
+              href="https://github.com/dross73/jmc-ng"
               target="_blank"
               rel="noreferrer"
             >
-              View source code
-              <span aria-hidden="true">↗</span>
-            </a>
-
-            <a
-              class="action-link"
-              href="https://www.youtube.com/playlist?list=PLgIdtA2WYegux__WIeeSRhu7x0h3X6LTE"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Watch milestone videos
+              View archived source
               <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -172,41 +164,39 @@
             <div>
               <p class="case-study-kicker">The Challenge</p>
               <h2 class="case-study-section-title" id="challenge-heading">
-                More than another CRUD demo
+                Avoiding an oversized CMS
               </h2>
             </div>
 
             <p class="case-study-lead">
-              The project needed to show the decisions behind a maintainable
-              application—not just forms that happen to save data.
+              Most of the site could remain static. Only the content that
+              actually changed needed an administrative workflow.
             </p>
           </div>
 
           <div class="case-study-body-grid">
             <div class="case-study-copy">
-              <h3>Building an application recruiters can inspect</h3>
+              <h3>Building only what the project needed</h3>
               <p>
-                The interface needed realistic administrative workflows for
-                listings and users. Those workflows had to stay aligned with
-                backend schemas, validation rules, database models, and role
-                requirements.
+                Instead of introducing a large content-management platform, I
+                created a focused backend for adding, editing, and deleting
+                records in the two dynamic areas.
               </p>
               <p>
-                I also wanted the project history to be understandable. Jira
-                tickets, incremental commits, and short walkthrough videos make
-                the decisions visible instead of presenting only a finished
-                screenshot.
+                A login flow protected the management tools. Once authenticated,
+                the interface exposed an additional administrative menu for the
+                authorized content workflows.
               </p>
             </div>
 
             <aside class="case-study-panel">
-              <h3>Core constraints</h3>
+              <h3>Project constraints</h3>
               <ul class="case-study-list">
-                <li>JWT authentication and role-based access</li>
-                <li>Frontend and backend validation that agree</li>
-                <li>Responsive administration screens</li>
-                <li>Clear loading, error, and submission states</li>
-                <li>Maintainable Angular and FastAPI organization</li>
+                <li>A simple public-facing website</li>
+                <li>Only two sections required dynamic content</li>
+                <li>Authenticated administrative actions</li>
+                <li>Separate frontend and backend deployments</li>
+                <li>A maintainable stack without unnecessary complexity</li>
               </ul>
             </aside>
           </div>
@@ -224,125 +214,125 @@
             <div>
               <p class="case-study-kicker">Key Implementation</p>
               <h2 class="case-study-section-title" id="build-heading">
-                Connected from interface to database
+                A focused full-stack architecture
               </h2>
             </div>
 
             <p class="case-study-lead">
-              Each feature is implemented as part of a full path through Angular
-              services, FastAPI endpoints, validation models, and PostgreSQL.
+              Angular handled the interface while Node, Express, and MongoDB
+              supported authentication and the dynamic content workflows.
             </p>
           </div>
 
           <div class="case-study-feature-grid case-study-feature-grid--four">
             <article class="case-study-feature">
               <span class="case-study-feature-number">01</span>
-              <h3>Admin routing</h3>
+              <h3>Angular frontend</h3>
               <p>
-                A shared administration layout organizes dashboard, user, and
-                listing routes while keeping login outside the protected shell.
+                The public website and authenticated management views shared one
+                responsive application structure.
               </p>
             </article>
 
             <article class="case-study-feature">
               <span class="case-study-feature-number">02</span>
-              <h3>Listing workflows</h3>
+              <h3>Node + Express API</h3>
               <p>
-                Administrators can view, create, inspect, and edit property
-                records through Angular reactive forms and API services.
+                Backend routes handled login and the create, edit, and delete
+                actions required by the dynamic sections.
               </p>
             </article>
 
             <article class="case-study-feature">
               <span class="case-study-feature-number">03</span>
-              <h3>User management</h3>
+              <h3>MongoDB storage</h3>
               <p>
-                User forms support roles, active status, validation, normalized
-                email values, and backend account creation.
+                The database stored the records that company staff needed to
+                maintain without editing source files.
               </p>
             </article>
 
             <article class="case-study-feature">
               <span class="case-study-feature-number">04</span>
-              <h3>API integration</h3>
+              <h3>AWS deployment</h3>
               <p>
-                FastAPI, SQLAlchemy, Pydantic, and PostgreSQL provide typed,
-                database-backed endpoints for the Angular interface.
+                The original architecture separated the frontend on Amazon S3
+                from the backend hosted through Elastic Beanstalk.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="case-study-section" aria-labelledby="accessibility-heading">
+      <section class="case-study-section" aria-labelledby="details-heading">
         <div class="section-marker" aria-hidden="true">
           <span class="section-marker-number">05</span>
-          <span class="section-marker-label">Accessibility</span>
+          <span class="section-marker-label">Details</span>
         </div>
 
         <div class="case-study-section-content">
           <div class="case-study-heading-row">
             <div>
-              <p class="case-study-kicker">Accessibility</p>
-              <h2 class="case-study-section-title" id="accessibility-heading">
-                Built into the workflow
+              <p class="case-study-kicker">Supporting Details</p>
+              <h2 class="case-study-section-title" id="details-heading">
+                Practical features around the core build
               </h2>
             </div>
 
             <p class="case-study-lead">
-              Accessibility is treated as an implementation requirement rather
-              than a final testing pass.
+              The application included the supporting pieces needed to make the
+              focused administration system useful.
             </p>
           </div>
 
           <ul class="case-study-checks">
-            <li>Semantic labels and form-control relationships</li>
-            <li>Keyboard-accessible navigation and actions</li>
-            <li>Visible validation, submission, and error feedback</li>
-            <li>Focus behavior considered during navigation changes</li>
-            <li>Responsive layouts that preserve reading order</li>
-            <li>Contrast and state visibility reviewed during styling</li>
+            <li>Login-protected content management</li>
+            <li>Administrative navigation shown after authentication</li>
+            <li>Create, edit, and delete operations for dynamic records</li>
+            <li>Nodemailer integration for email functionality</li>
+            <li>Bootstrap used for interface structure and responsiveness</li>
+            <li>Git and GitHub used to track the project</li>
           </ul>
         </div>
       </section>
 
-      <section class="case-study-section" aria-labelledby="status-heading">
+      <section class="case-study-section" aria-labelledby="result-heading">
         <div class="section-marker" aria-hidden="true">
           <span class="section-marker-number">06</span>
-          <span class="section-marker-label">Status</span>
+          <span class="section-marker-label">Reflection</span>
         </div>
 
         <div class="case-study-section-content">
           <div class="case-study-heading-row">
             <div>
-              <p class="case-study-kicker">Current Status</p>
-              <h2 class="case-study-section-title" id="status-heading">
-                A working foundation with room to grow
+              <p class="case-study-kicker">Project Reflection</p>
+              <h2 class="case-study-section-title" id="result-heading">
+                An early full-stack client build
               </h2>
             </div>
 
             <p class="case-study-lead">
-              The administrative foundation is connected and usable. The next
-              milestones will make the project stronger as a public product.
+              The project remains valuable because it shows how I approached a
+              real client need with a deliberately limited administrative scope.
             </p>
           </div>
 
           <div class="case-study-status-grid">
             <article class="case-study-status-card">
-              <h3>Built so far</h3>
+              <h3>What it demonstrates</h3>
               <p>
-                Authentication, roles, admin routing, listing workflows, user
-                creation, database-backed APIs, responsive interfaces, and
-                documented development milestones.
+                Requirements-based architecture, authenticated administration,
+                database-backed content, and separate cloud deployment of a
+                frontend and backend.
               </p>
             </article>
 
             <article class="case-study-status-card">
-              <h3>Next improvements</h3>
+              <h3>What I would modernize</h3>
               <p>
-                Image uploads, expanded automated testing, deployment
-                automation, public listing pages, and additional administrative
-                refinements.
+                I would revisit accessibility, automated testing, dependency
+                versions, deployment automation, and the visual system using the
+                standards applied in my current projects.
               </p>
             </article>
           </div>
@@ -351,8 +341,8 @@
 
       <div class="case-study-next">
         <p>Next case study</p>
-        <a href="dan-ross-portfolio.html">
-          Dan Ross Portfolio
+        <a href="real-estate-admin.html">
+          Real Estate Admin
           <span aria-hidden="true">→</span>
         </a>
       </div>
