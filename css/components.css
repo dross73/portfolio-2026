@@ -469,53 +469,14 @@
   object-position: center;
 }
 
-.about-portrait-placeholder span {
-  position: relative;
-  z-index: 2;
-  max-width: 8rem;
-  font-size: 0.69rem;
-  font-weight: 700;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.about-portrait-placeholder {
-  position: relative;
-  display: grid;
-  place-items: start center;
+.about-portrait {
+  align-self: center;
+  display: block;
   width: 100%;
-  aspect-ratio: 1;
-  overflow: hidden;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 50%;
-  background-color: var(--color-olive);
-  color: var(--color-surface);
-}
-
-.about-portrait-placeholder::before {
-  position: absolute;
-  top: 18%;
-  left: 50%;
-  width: 36%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: #ba9466;
-  content: '';
-  transform: translateX(-50%);
-}
-
-.about-portrait-placeholder::after {
-  position: absolute;
-  right: 3%;
-  bottom: -2%;
-  left: 3%;
-  height: 40%;
-  border-radius: 50% 50% 0 0;
-  background-color: var(--color-dark-surface);
-  content: '';
-}
-
-.about-portrait-placeholder span {
-  margin-top: 0.8rem;
 }
 
 /* Contact and footer */
