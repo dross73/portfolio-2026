@@ -386,6 +386,12 @@
     transition-delay: 0s;
   }
 
+  .site-header:has(nav.is-open) .nav-toggle {
+    position: fixed;
+    top: 1.25rem;
+    right: 1rem;
+  }
+
   .nav-list {
     flex-direction: column;
     align-items: stretch;
