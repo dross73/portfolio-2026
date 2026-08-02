@@ -434,22 +434,14 @@
   .about-values .section-marker,
   .about-offscreen .section-marker,
   .about-closing .section-marker {
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 0.65rem;
     width: max-content;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 0.5rem;
     padding: 0.75rem 0 0.3rem;
     border-right: 0;
     border-bottom: 1px solid var(--color-accent);
-  }
-
-  .about-hero .section-marker-label,
-  .about-story .section-marker-label,
-  .about-work .section-marker-label,
-  .about-values .section-marker-label,
-  .about-offscreen .section-marker-label,
-  .about-closing .section-marker-label {
-    writing-mode: horizontal-tb;
   }
 
   .about-hero-content {

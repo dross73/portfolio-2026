@@ -460,22 +460,14 @@
   .experience-independent .section-marker,
   .experience-capabilities .section-marker,
   .experience-next-chapter .section-marker {
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 0.65rem;
     width: max-content;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 0.5rem;
     padding: 0.75rem 0 0.3rem;
     border-right: 0;
     border-bottom: 1px solid var(--color-accent);
-  }
-
-  .experience-hero .section-marker-label,
-  .experience-feature .section-marker-label,
-  .experience-timeline-section .section-marker-label,
-  .experience-independent .section-marker-label,
-  .experience-capabilities .section-marker-label,
-  .experience-next-chapter .section-marker-label {
-    writing-mode: horizontal-tb;
   }
 
   .experience-hero-content {
