@@ -280,7 +280,7 @@
 }
 
 .about-values-grid > article > span {
-  color: var(--color-orange);
+  color: var(--color-orange-text);
   font-family: var(--font-heading);
   font-size: 1.8rem;
   line-height: 1;

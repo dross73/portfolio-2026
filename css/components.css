@@ -564,12 +564,6 @@
   margin-top: 0.75rem;
 }
 
-.contact-detail-mark {
-  width: 0.55rem;
-  height: 0.55rem;
-  border: 2px solid var(--color-accent);
-  border-radius: 50%;
-}
 
 .contact-details a {
   width: max-content;
@@ -692,7 +686,7 @@
     min-height: 15rem;
   }
 
-  .about-portrait-placeholder {
+  .about-portrait {
     justify-self: center;
     width: min(18rem, 100%);
   }

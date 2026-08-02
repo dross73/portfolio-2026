@@ -18,6 +18,14 @@ if (navToggle && primaryNavigation) {
     updateNavigationButton(isOpen);
   });
 
+  // Closes the mobile menu after a navigation link is selected.
+  primaryNavigation.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      primaryNavigation.classList.remove('is-open');
+      updateNavigationButton(false);
+    });
+  });
+
   // Closes the mobile menu and returns focus to the toggle button.
   document.addEventListener('keydown', (event) => {
     const isOpen = primaryNavigation.classList.contains('is-open');
@@ -29,25 +37,3 @@ if (navToggle && primaryNavigation) {
     }
   });
 }
-
-// Prevent unfinished links from jumping to the top of the page.
-const comingSoonLinks = document.querySelectorAll('a[href="#"]');
-
-comingSoonLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    window.alert('Coming soon.');
-  });
-});
-
-// Show the back-to-top link after the visitor scrolls down.
-const backToTopLink = document.querySelector('.back-to-top');
-
-const updateBackToTopVisibility = () => {
-  backToTopLink.classList.toggle('is-visible', window.scrollY > 500);
-};
-
-window.addEventListener('scroll', updateBackToTopVisibility);
-
-updateBackToTopVisibility();

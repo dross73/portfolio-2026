@@ -77,6 +77,11 @@
   color: var(--case-study-color);
 }
 
+.case-study-page--orange .case-study-heading-accent,
+.case-study-page--orange .case-study-feature-number {
+  color: var(--color-orange-text);
+}
+
 .case-study-summary {
   max-width: 34rem;
   margin-top: 1.5rem;
