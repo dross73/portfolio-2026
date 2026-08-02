@@ -37,3 +37,18 @@ if (navToggle && primaryNavigation) {
     }
   });
 }
+
+const backToTop = document.querySelector('.back-to-top');
+
+if (backToTop) {
+  // Shows the link after the visitor scrolls down the page.
+  const updateBackToTopVisibility = () => {
+    backToTop.classList.toggle('is-visible', window.scrollY > 600);
+  };
+
+  updateBackToTopVisibility();
+
+  window.addEventListener('scroll', updateBackToTopVisibility, {
+    passive: true,
+  });
+}
