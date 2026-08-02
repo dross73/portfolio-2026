@@ -25,7 +25,6 @@
   </head>
 
   <body id="top" class="case-study-page case-study-page--orange">
-
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <header class="site-header">
@@ -47,10 +46,10 @@
       <nav id="primary-navigation" aria-label="Primary navigation">
         <ul class="nav-list">
           <li><a href="../index.html#work">Work</a></li>
-          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../experience.html">Experience</a></li>
           <li><a href="../index.html#lab">The Lab</a></li>
-          <li><a href="../index.html#archive">Archive</a></li>
-          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../vault.html">Archive</a></li>
+          <li><a href="../about.html">About</a></li>
           <li><a href="../index.html#contact">Contact</a></li>
         </ul>
       </nav>
@@ -73,7 +72,7 @@
               Back to selected projects
             </a>
 
-            <p class="case-study-eyebrow">Client Full-Stack Website</p>
+            <p class="case-study-eyebrow">Client Website</p>
 
             <h1 class="case-study-title-long" id="case-study-heading">
               <span>Josephson</span>
@@ -81,14 +80,12 @@
             </h1>
 
             <p class="case-study-summary">
-              A manufacturing website designed around a simple public
-              experience and a focused administrative system for the content
-              that needed regular updates.
+              An Angular website for a radiator manufacturer with a custom,
+              authenticated product-management area backed by Node, Express, and
+              MongoDB.
             </p>
 
-            <p class="case-study-stack">
-              Angular / Node.js / MongoDB / AWS
-            </p>
+            <p class="case-study-stack">Angular / Node.js / MongoDB / AWS</p>
           </div>
 
           <figure class="case-study-hero-visual">
@@ -113,14 +110,15 @@
             <div>
               <p class="case-study-kicker">Project Overview</p>
               <h2 class="case-study-section-title" id="overview-heading">
-                Simple for visitors and maintainers
+                A public site with protected product management
               </h2>
             </div>
 
             <p class="case-study-lead">
-              The project was designed for a radiator manufacturing company that
-              needed a straightforward website and control over two sections
-              that changed more frequently.
+              Josephson Manufacturing needed a straightforward public website,
+              but the product catalog needed to be updated without editing
+              source files. I built a protected administrative workflow for
+              creating, editing, and deleting product records.
             </p>
           </div>
 
@@ -135,7 +133,7 @@
             </div>
             <div>
               <dt>Primary focus</dt>
-              <dd>Focused content management and cloud deployment</dd>
+              <dd>Product management, authentication, and cloud deployment</dd>
             </div>
           </dl>
 
@@ -164,39 +162,42 @@
             <div>
               <p class="case-study-kicker">The Challenge</p>
               <h2 class="case-study-section-title" id="challenge-heading">
-                Avoiding an oversized CMS
+                Making the product catalog editable
               </h2>
             </div>
 
             <p class="case-study-lead">
-              Most of the site could remain static. Only the content that
-              actually changed needed an administrative workflow.
+              The site did not need a large content-management system. It needed
+              one focused workflow that allowed product information and images
+              to be maintained separately from the rest of the website.
             </p>
           </div>
 
           <div class="case-study-body-grid">
             <div class="case-study-copy">
-              <h3>Building only what the project needed</h3>
+              <h3>Building only what the client needed</h3>
               <p>
-                Instead of introducing a large content-management platform, I
-                created a focused backend for adding, editing, and deleting
-                records in the two dynamic areas.
+                The public Products page loaded its records from the backend and
+                displayed each product's name, number, description, and image.
+                Authenticated users received access to separate administrative
+                routes for maintaining those records.
               </p>
               <p>
-                A login flow protected the management tools. Once authenticated,
-                the interface exposed an additional administrative menu for the
-                authorized content workflows.
+                The same Angular reactive form supported both creating and
+                editing products. Image files were validated, previewed in the
+                browser, uploaded through the API, and stored with the product
+                data.
               </p>
             </div>
 
             <aside class="case-study-panel">
               <h3>Project constraints</h3>
               <ul class="case-study-list">
-                <li>A simple public-facing website</li>
-                <li>Only two sections required dynamic content</li>
-                <li>Authenticated administrative actions</li>
+                <li>A straightforward public manufacturing website</li>
+                <li>A database-backed product catalog</li>
+                <li>Authenticated create, edit, and delete actions</li>
+                <li>Product image uploads</li>
                 <li>Separate frontend and backend deployments</li>
-                <li>A maintainable stack without unnecessary complexity</li>
               </ul>
             </aside>
           </div>
@@ -214,50 +215,53 @@
             <div>
               <p class="case-study-kicker">Key Implementation</p>
               <h2 class="case-study-section-title" id="build-heading">
-                A focused full-stack architecture
+                A full-stack product workflow
               </h2>
             </div>
 
             <p class="case-study-lead">
-              Angular handled the interface while Node, Express, and MongoDB
-              supported authentication and the dynamic content workflows.
+              Angular handled the public and administrative interfaces. Node and
+              Express provided the API, MongoDB stored the product and user
+              records, and JWT authentication protected the management tools.
             </p>
           </div>
 
           <div class="case-study-feature-grid case-study-feature-grid--four">
             <article class="case-study-feature">
               <span class="case-study-feature-number">01</span>
-              <h3>Angular frontend</h3>
+              <h3>Angular interface</h3>
               <p>
-                The public website and authenticated management views shared one
-                responsive application structure.
+                The public pages and protected product-management screens were
+                contained in one Angular application and used Bootstrap for
+                layout and responsive behavior.
               </p>
             </article>
 
             <article class="case-study-feature">
               <span class="case-study-feature-number">02</span>
-              <h3>Node + Express API</h3>
+              <h3>Product management</h3>
               <p>
-                Backend routes handled login and the create, edit, and delete
-                actions required by the dynamic sections.
+                A shared reactive form supported creating and editing products,
+                including validation, image selection, and a browser preview.
               </p>
             </article>
 
             <article class="case-study-feature">
               <span class="case-study-feature-number">03</span>
-              <h3>MongoDB storage</h3>
+              <h3>Protected API</h3>
               <p>
-                The database stored the records that company staff needed to
-                maintain without editing source files.
+                Express routes provided product CRUD operations while JWT
+                middleware protected create, update, and delete requests.
               </p>
             </article>
 
             <article class="case-study-feature">
               <span class="case-study-feature-number">04</span>
-              <h3>AWS deployment</h3>
+              <h3>MongoDB and AWS</h3>
               <p>
-                The original architecture separated the frontend on Amazon S3
-                from the backend hosted through Elastic Beanstalk.
+                MongoDB stored product and user records. The Angular frontend
+                was hosted on Amazon S3, while the Node and Express backend ran
+                through AWS Elastic Beanstalk.
               </p>
             </article>
           </div>
@@ -275,23 +279,23 @@
             <div>
               <p class="case-study-kicker">Supporting Details</p>
               <h2 class="case-study-section-title" id="details-heading">
-                Practical features around the core build
+                What the application included
               </h2>
             </div>
 
             <p class="case-study-lead">
-              The application included the supporting pieces needed to make the
-              focused administration system useful.
+              The project combined public product browsing with a small set of
+              protected tools for maintaining the catalog.
             </p>
           </div>
 
           <ul class="case-study-checks">
-            <li>Login-protected content management</li>
+            <li>Public product records loaded from the API</li>
+            <li>JWT-based login and protected Angular routes</li>
             <li>Administrative navigation shown after authentication</li>
-            <li>Create, edit, and delete operations for dynamic records</li>
-            <li>Nodemailer integration for email functionality</li>
-            <li>Bootstrap used for interface structure and responsiveness</li>
-            <li>Git and GitHub used to track the project</li>
+            <li>Create, edit, and delete operations for products</li>
+            <li>Product image upload and browser preview</li>
+            <li>Bootstrap-based responsive interface</li>
           </ul>
         </div>
       </section>
@@ -312,8 +316,10 @@
             </div>
 
             <p class="case-study-lead">
-              The project remains valuable because it shows how I approached a
-              real client need with a deliberately limited administrative scope.
+              This was a real client website that was deployed and used by
+              Josephson Manufacturing. The company is no longer using the site,
+              but I kept the project because it represents an important early
+              full-stack build in my career.
             </p>
           </div>
 
@@ -321,18 +327,22 @@
             <article class="case-study-status-card">
               <h3>What it demonstrates</h3>
               <p>
-                Requirements-based architecture, authenticated administration,
-                database-backed content, and separate cloud deployment of a
-                frontend and backend.
+                A complete product-management workflow from an Angular interface
+                through an authenticated Express API to MongoDB, including image
+                uploads, protected administration, and separate AWS deployments
+                for the frontend and backend.
               </p>
             </article>
 
             <article class="case-study-status-card">
-              <h3>What I would modernize</h3>
+              <h3>How I would approach it today</h3>
               <p>
-                I would revisit accessibility, automated testing, dependency
-                versions, deployment automation, and the visual system using the
-                standards applied in my current projects.
+                Today I would use current framework versions, improve
+                accessibility throughout the interface, add automated frontend
+                and backend tests, strengthen validation and error handling, and
+                automate more of the deployment process. I would keep the
+                original decision to build only the administrative features the
+                client actually needed.
               </p>
             </article>
           </div>

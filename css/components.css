@@ -204,6 +204,21 @@
   text-transform: uppercase;
 }
 
+.lab-status {
+  color: var(--color-accent-text);
+  font-size: 0.69rem;
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.lab-description {
+  max-width: 44rem;
+  margin-top: 0.55rem;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
 .projects-archive-link {
   display: inline-flex;
   align-items: center;
@@ -648,7 +663,7 @@
     flex-direction: row;
     align-items: baseline;
     gap: 0.5rem;
-    padding-top: 0;
+    padding-top: 0.75rem;
     padding-bottom: 0.3rem;
     border-right: 0;
     border-bottom: 1px solid var(--color-accent);
@@ -660,7 +675,7 @@
 
   .vault-section .section-marker,
   .about-section .section-marker {
-    padding-top: 0;
+    padding-top: 0.75rem;
   }
 
   .vault-copy,
