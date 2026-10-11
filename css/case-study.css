@@ -115,6 +115,20 @@
   padding: clamp(1.5rem, 3vw, 3rem);
 }
 
+.case-study-hero-visual--placeholder {
+  min-height: 18rem;
+}
+
+.case-study-hero-visual--placeholder p {
+  max-width: 15rem;
+  color: var(--color-background);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .case-study-hero-visual img,
 .case-study-media img {
   display: block;

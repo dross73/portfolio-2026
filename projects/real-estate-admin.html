@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Case study of a full-stack real estate admin application built by Dan Ross with Angular, FastAPI, PostgreSQL, authentication, and role-based user management."
+      content="Case study of Juniper & Lane Realty, a full-stack Angular, FastAPI, PostgreSQL, and cloud-storage real estate application built by Dan Ross."
     />
 
-    <title>Angular and FastAPI Real Estate App Case Study | Dan Ross</title>
+    <title>Juniper &amp; Lane Realty Full-Stack Case Study | Dan Ross</title>
     <link
       rel="canonical"
       href="https://dan-ross.dev/projects/real-estate-admin.html"
@@ -79,27 +79,26 @@
 
             <p class="case-study-eyebrow">Full-Stack Application</p>
 
-            <h1 id="case-study-heading">
-              <span>Real Estate</span>
-              <span class="case-study-heading-accent">Admin</span>
+            <h1 class="case-study-title-long" id="case-study-heading">
+              <span>Juniper &amp; Lane</span>
+              <span class="case-study-heading-accent">Realty</span>
             </h1>
 
             <p class="case-study-summary">
-              A full-stack real estate management application with authenticated
-              administration, listing management, user roles, responsive
-              interfaces, and accessibility-focused form workflows.
+              A deployed real estate application that combines a public
+              property-search experience, customer accounts, and a
+              role-protected brokerage administration system.
             </p>
 
-            <p class="case-study-stack">Angular / FastAPI / PostgreSQL</p>
+            <p class="case-study-stack">
+              Angular / TypeScript / FastAPI / PostgreSQL / Cloud Storage
+            </p>
           </div>
 
-          <figure class="case-study-hero-visual">
-            <img
-              src="../assets/images/RealEstate.png"
-              alt="Real Estate Admin interface showing property management tools"
-              width="1920"
-              height="1080"
-            />
+          <figure
+            class="case-study-hero-visual case-study-hero-visual--placeholder"
+          >
+            <img src="../assets/images/juniper-lane-card.webp" width="1200" height="675" alt="" />
           </figure>
         </div>
       </section>
@@ -115,14 +114,15 @@
             <div>
               <p class="case-study-kicker">Project Overview</p>
               <h2 class="case-study-section-title" id="overview-heading">
-                Proving the complete data flow
+                Building beyond a CRUD demo
               </h2>
             </div>
 
             <p class="case-study-lead">
-              I built this project to demonstrate how a modern Angular
-              administration interface connects to a FastAPI API, authentication
-              layer, and PostgreSQL database.
+              I built Juniper &amp; Lane to show a complete application
+              lifecycle: public browsing, account workflows, internal
+              administration, durable media storage, automated testing, security
+              controls, and production deployment.
             </p>
           </div>
 
@@ -133,15 +133,27 @@
             </div>
             <div>
               <dt>Status</dt>
-              <dd>Actively in development</dd>
+              <dd>Live and deployed</dd>
             </div>
             <div>
               <dt>Primary focus</dt>
-              <dd>Admin workflows, authentication, and accessibility</dd>
+              <dd>
+                Full-stack architecture, workflows, testing, and deployment
+              </dd>
             </div>
           </dl>
 
           <div class="case-study-links">
+            <a
+              class="action-link"
+              href="https://realestate.dan-ross.dev/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit live site
+              <span aria-hidden="true">↗</span>
+            </a>
+
             <a
               class="action-link"
               href="https://github.com/dross73/real_estate_project"
@@ -176,41 +188,43 @@
             <div>
               <p class="case-study-kicker">The Challenge</p>
               <h2 class="case-study-section-title" id="challenge-heading">
-                More than another CRUD demo
+                Three experiences sharing one system
               </h2>
             </div>
 
             <p class="case-study-lead">
-              The project needed to show the decisions behind a maintainable
-              application, not just forms that happen to save data.
+              The application needed to serve anonymous visitors, registered
+              customers, and brokerage staff without mixing their
+              responsibilities or weakening the backend authorization boundary.
             </p>
           </div>
 
           <div class="case-study-body-grid">
             <div class="case-study-copy">
-              <h3>Building an application recruiters can inspect</h3>
+              <h3>Keeping the architecture understandable</h3>
               <p>
-                The interface needed realistic administrative workflows for
-                listings and users. Those workflows had to stay aligned with
-                backend schemas, validation rules, database models, and role
-                requirements.
+                The public experience includes search, filtering, listing
+                details, community content, open houses, and agent information.
+                Customer accounts add saved homes, recently viewed listings,
+                saved searches, alerts, and inquiry workflows.
               </p>
               <p>
-                I also wanted the project history to be understandable. Jira
-                tickets, incremental commits, and short walkthrough videos make
-                the decisions visible instead of presenting only a finished
-                screenshot.
+                A separate protected administration area manages listings,
+                photos, documents, agents, offices, leads, testimonials, users,
+                analytics, and site settings. FastAPI remains the authoritative
+                layer for validation, authentication, authorization, and
+                business rules.
               </p>
             </div>
 
             <aside class="case-study-panel">
               <h3>Core constraints</h3>
               <ul class="case-study-list">
-                <li>JWT authentication and role-based access</li>
-                <li>Frontend and backend validation that agree</li>
-                <li>Responsive administration screens</li>
-                <li>Clear loading, error, and submission states</li>
-                <li>Maintainable Angular and FastAPI organization</li>
+                <li>Public, customer, staff, and administrator workflows</li>
+                <li>Role-based access enforced by the backend</li>
+                <li>Relational data plus durable listing media</li>
+                <li>Email verification, password recovery, and internal MFA</li>
+                <li>Responsive and accessibility-focused interfaces</li>
               </ul>
             </aside>
           </div>
@@ -228,132 +242,138 @@
             <div>
               <p class="case-study-kicker">Key Implementation</p>
               <h2 class="case-study-section-title" id="build-heading">
-                Connected from interface to database
+                Connected from browser to storage
               </h2>
             </div>
 
             <p class="case-study-lead">
-              Each feature is implemented as part of a full path through Angular
-              services, FastAPI endpoints, validation models, and PostgreSQL.
+              Angular owns presentation and browser interaction. FastAPI handles
+              the API and business rules, PostgreSQL stores relational data, and
+              S3-compatible object storage keeps listing media outside the web
+              server filesystem.
             </p>
           </div>
 
           <div class="case-study-feature-grid case-study-feature-grid--four">
             <article class="case-study-feature">
               <span class="case-study-feature-number">01</span>
-              <h3>Admin routing</h3>
+              <h3>Public search</h3>
               <p>
-                A shared administration layout organizes dashboard, user, and
-                listing routes while keeping login outside the protected shell.
+                Search, filters, sorting, pagination, listing details, featured
+                homes, communities, open houses, and public-safe previews.
               </p>
             </article>
 
             <article class="case-study-feature">
               <span class="case-study-feature-number">02</span>
-              <h3>Listing workflows</h3>
+              <h3>Account workflows</h3>
               <p>
-                Administrators can view, create, inspect, and edit property
-                records through Angular reactive forms and API services.
+                Registration, email verification, login, password recovery,
+                favorites, recently viewed listings, saved searches, and alerts.
               </p>
             </article>
 
             <article class="case-study-feature">
               <span class="case-study-feature-number">03</span>
-              <h3>User management</h3>
+              <h3>Admin operations</h3>
               <p>
-                User forms support roles, active status, validation, normalized
-                email values, and backend account creation.
+                Role-protected listing management, media workflows, open houses,
+                documents, leads, users, content, analytics, and CSV exports.
               </p>
             </article>
 
             <article class="case-study-feature">
               <span class="case-study-feature-number">04</span>
-              <h3>API integration</h3>
+              <h3>Production architecture</h3>
               <p>
-                FastAPI, SQLAlchemy, Pydantic, and PostgreSQL provide typed,
-                database-backed endpoints for the Angular interface.
+                Render hosts the application and PostgreSQL while S3-compatible
+                storage handles media. Alembic migrations manage schema changes.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section
-        class="case-study-section"
-        aria-labelledby="accessibility-heading"
-      >
+      <section class="case-study-section" aria-labelledby="quality-heading">
         <div class="section-marker" aria-hidden="true">
           <span class="section-marker-number">05</span>
-          <span class="section-marker-label">Accessibility</span>
+          <span class="section-marker-label">Quality</span>
         </div>
 
         <div class="case-study-section-content">
           <div class="case-study-heading-row">
             <div>
-              <p class="case-study-kicker">Accessibility</p>
-              <h2 class="case-study-section-title" id="accessibility-heading">
-                Built into the workflow
+              <p class="case-study-kicker">Quality + Security</p>
+              <h2 class="case-study-section-title" id="quality-heading">
+                Treating launch work as part of the build
               </h2>
             </div>
 
             <p class="case-study-lead">
-              Accessibility is treated as an implementation requirement rather
-              than a final testing pass.
+              The project includes automated checks and operational safeguards
+              so the deployed application demonstrates more than feature
+              development.
             </p>
           </div>
 
           <ul class="case-study-checks">
-            <li>Explicit labels on primary data-entry forms</li>
-            <li>Keyboard-accessible navigation and actions</li>
-            <li>Visible validation, submission, and error feedback</li>
-            <li>Semantic landmarks and a structured heading hierarchy</li>
-            <li>Responsive layouts that preserve reading order</li>
+            <li>Angular unit tests and backend pytest coverage</li>
+            <li>GitHub Actions builds and tests both application halves</li>
+            <li>Alembic migrations are validated before deployment</li>
+            <li>Dependency audits run for frontend and backend packages</li>
+            <li>TOTP MFA and recovery codes protect internal accounts</li>
+            <li>Audit logging records sensitive administrative actions</li>
             <li>
-              Loading, error, disabled, and status states include visible text
+              Upload validation and storage boundaries protect media workflows
+            </li>
+            <li>
+              WCAG-focused templates, keyboard behavior, and visible status
+              states
             </li>
           </ul>
         </div>
       </section>
 
-      <section class="case-study-section" aria-labelledby="status-heading">
+      <section class="case-study-section" aria-labelledby="result-heading">
         <div class="section-marker" aria-hidden="true">
           <span class="section-marker-number">06</span>
-          <span class="section-marker-label">Status</span>
+          <span class="section-marker-label">Result</span>
         </div>
 
         <div class="case-study-section-content">
           <div class="case-study-heading-row">
             <div>
-              <p class="case-study-kicker">Current Status</p>
-              <h2 class="case-study-section-title" id="status-heading">
-                A working foundation with room to grow
+              <p class="case-study-kicker">The Result</p>
+              <h2 class="case-study-section-title" id="result-heading">
+                A portfolio project that behaves like a real product
               </h2>
             </div>
 
             <p class="case-study-lead">
-              The core admin workflows are connected and usable. The next
-              milestones will expand the project with image uploads, public
-              listing pages, stronger automated testing, and deployment
-              improvements.
+              Juniper &amp; Lane now gives recruiters a live application they
+              can browse while the repository shows the architecture, tests,
+              deployment configuration, documentation, and incremental project
+              history behind it.
             </p>
           </div>
 
           <div class="case-study-status-grid">
             <article class="case-study-status-card">
-              <h3>Built so far</h3>
+              <h3>What it demonstrates</h3>
               <p>
-                Authentication, roles, admin routing, listing workflows, user
-                creation, database-backed APIs, responsive interfaces, and
-                documented development milestones.
+                Angular and TypeScript, Python and FastAPI, SQLAlchemy,
+                PostgreSQL, API design, authentication and authorization, file
+                storage, migrations, testing, CI, accessibility, and deployment.
               </p>
             </article>
 
             <article class="case-study-status-card">
-              <h3>Next improvements</h3>
+              <h3>Why I built it this way</h3>
               <p>
-                Image uploads, expanded automated testing, deployment
-                automation, public listing pages, and additional administrative
-                refinements.
+                I wanted one project that exposed the decisions between layers:
+                how browser state maps to an API, how the API protects data, how
+                relational records connect to media, and how those pieces are
+                tested and deployed together.
               </p>
             </article>
           </div>
@@ -362,8 +382,8 @@
 
       <div class="case-study-next">
         <p>Next case study</p>
-        <a href="dan-ross-portfolio.html">
-          Dan Ross Portfolio
+        <a href="spreadsheet-checkup.html">
+          Spreadsheet Checkup
           <span aria-hidden="true">→</span>
         </a>
       </div>
