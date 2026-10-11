@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Case study of Spreadsheet Checkup, a Python and FastAPI Excel workbook analysis tool built by Dan Ross with automated testing, browser tests, and privacy-focused file handling."
+    />
+
+    <title>Spreadsheet Checkup Python/FastAPI Case Study | Dan Ross</title>
+    <link
+      rel="canonical"
+      href="https://dan-ross.dev/projects/spreadsheet-checkup.html"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Big+Shoulders+Display:wght@900&family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/case-study.css" />
+    <script src="../js/main.js" defer></script>
+  </head>
+
+  <body id="top" class="case-study-page case-study-page--red">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <a class="site-name" href="../index.html">Dan Ross</a>
+      <p class="site-role">Web Developer</p>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation"
+      >
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+        <span class="nav-toggle-line" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-navigation" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../experience.html">Experience</a></li>
+          <li><a href="../index.html#lab">The Lab</a></li>
+          <li><a href="../vault.html">Archive</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="case-study-hero" aria-labelledby="case-study-heading">
+        <div class="section-marker" aria-hidden="true">
+          <span class="section-marker-number">01</span>
+          <span class="section-marker-label">Case Study</span>
+        </div>
+
+        <div class="case-study-hero-main">
+          <div class="case-study-hero-copy">
+            <a
+              class="action-link case-study-back-link"
+              href="../index.html#work"
+            >
+              <span aria-hidden="true">←</span>
+              Back to selected projects
+            </a>
+
+            <p class="case-study-eyebrow">Focused Utility</p>
+
+            <h1 class="case-study-title-long" id="case-study-heading">
+              <span>Spreadsheet</span>
+              <span class="case-study-heading-accent">Checkup</span>
+            </h1>
+
+            <p class="case-study-summary">
+              A deployed Excel workbook analysis tool that surfaces formula,
+              dependency, structure, formatting, and data-quality problems with
+              clear evidence and suggested next steps.
+            </p>
+
+            <p class="case-study-stack">
+              Python / FastAPI / openpyxl / Jinja / pytest
+            </p>
+          </div>
+
+          <figure class="case-study-hero-visual">
+            <img
+              src="../assets/images/spreadsheet-checkup-card.svg"
+              alt="Spreadsheet Checkup homepage with Excel workbook upload panel"
+              width="360"
+              height="203"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-study-section" aria-labelledby="overview-heading">
+        <div class="section-marker" aria-hidden="true">
+          <span class="section-marker-number">02</span>
+          <span class="section-marker-label">Overview</span>
+        </div>
+
+        <div class="case-study-section-content">
+          <div class="case-study-heading-row">
+            <div>
+              <p class="case-study-kicker">Project Overview</p>
+              <h2 class="case-study-section-title" id="overview-heading">
+                Turning spreadsheet review into a focused product
+              </h2>
+            </div>
+
+            <p class="case-study-lead">
+              Spreadsheet Checkup is deliberately small in scope: upload an Excel
+              workbook, analyze it safely, and return findings that help someone
+              decide what deserves attention.
+            </p>
+          </div>
+
+          <dl class="case-study-meta">
+            <div>
+              <dt>Role</dt>
+              <dd>Product and backend developer</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Live and deployed</dd>
+            </div>
+            <div>
+              <dt>Primary focus</dt>
+              <dd>Static analysis, testing, validation, and clear reporting</dd>
+            </div>
+          </dl>
+
+          <div class="case-study-links">
+            <a
+              class="action-link"
+              href="https://micro-utility.onrender.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit live app
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section" aria-labelledby="challenge-heading">
+        <div class="section-marker" aria-hidden="true">
+          <span class="section-marker-number">03</span>
+          <span class="section-marker-label">Challenge</span>
+        </div>
+
+        <div class="case-study-section-content">
+          <div class="case-study-heading-row">
+            <div>
+              <p class="case-study-kicker">The Challenge</p>
+              <h2 class="case-study-section-title" id="challenge-heading">
+                Useful findings without pretending to know too much
+              </h2>
+            </div>
+
+            <p class="case-study-lead">
+              Spreadsheet problems are often contextual. The analyzer needed to
+              detect strong defect signals while clearly separating them from
+              heuristic review items that might be unusual but valid.
+            </p>
+          </div>
+
+          <div class="case-study-body-grid">
+            <div class="case-study-copy">
+              <h3>Designing for evidence instead of alarms</h3>
+              <p>
+                The tool checks formulas, hidden dependencies, external links,
+                data consistency, table structure, formatting drift, validation
+                rules, defined names, and other workbook risks. Each finding can
+                include severity, confidence, worksheet and cell location,
+                evidence, an explanation, and a suggested review step.
+              </p>
+              <p>
+                Results are grouped so a user can start with the strongest
+                signals instead of receiving an undifferentiated wall of
+                warnings. The application also explains coverage limits so the
+                report does not imply that static analysis proves a workbook is
+                correct.
+              </p>
+            </div>
+
+            <aside class="case-study-panel">
+              <h3>Product constraints</h3>
+              <ul class="case-study-list">
+                <li>Accept .xlsx and .xlsm files without executing macros</li>
+                <li>Keep the workflow usable without signup or workbook history</li>
+                <li>Distinguish likely defects from review signals</li>
+                <li>Handle noisy or unusually large workbooks safely</li>
+                <li>Offer human-readable and machine-readable results</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section" aria-labelledby="build-heading">
+        <div class="section-marker" aria-hidden="true">
+          <span class="section-marker-number">04</span>
+          <span class="section-marker-label">Build</span>
+        </div>
+
+        <div class="case-study-section-content">
+          <div class="case-study-heading-row">
+            <div>
+              <p class="case-study-kicker">Key Implementation</p>
+              <h2 class="case-study-section-title" id="build-heading">
+                One analyzer, multiple ways to use the result
+              </h2>
+            </div>
+
+            <p class="case-study-lead">
+              FastAPI handles uploads and reporting while openpyxl inspects the
+              workbook. The same analysis can be consumed through the browser or
+              through a JSON API.
+            </p>
+          </div>
+
+          <div class="case-study-feature-grid case-study-feature-grid--four">
+            <article class="case-study-feature">
+              <span class="case-study-feature-number">01</span>
+              <h3>Workbook analysis</h3>
+              <p>
+                Formula integrity, hidden assumptions, cross-sheet dependencies,
+                data quality, validation rules, formatting drift, and structural
+                checks are analyzed without recalculating the workbook.
+              </p>
+            </article>
+
+            <article class="case-study-feature">
+              <span class="case-study-feature-number">02</span>
+              <h3>Actionable reports</h3>
+              <p>
+                Findings include severity, confidence, evidence, plain-language
+                explanations, filters, per-sheet statistics, and suggested next
+                steps.
+              </p>
+            </article>
+
+            <article class="case-study-feature">
+              <span class="case-study-feature-number">03</span>
+              <h3>API + exports</h3>
+              <p>
+                The analyzer is available through a multipart JSON API, and
+                results can be downloaded as JSON or CSV for additional review.
+              </p>
+            </article>
+
+            <article class="case-study-feature">
+              <span class="case-study-feature-number">04</span>
+              <h3>Safety limits</h3>
+              <p>
+                Upload size, workbook expansion, worksheet size, formula counts,
+                noisy finding categories, and analyzer concurrency are bounded.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-study-section" aria-labelledby="testing-heading">
+        <div class="section-marker" aria-hidden="true">
+          <span class="section-marker-number">05</span>
+          <span class="section-marker-label">Testing</span>
+        </div>
+
+        <div class="case-study-section-content">
+          <div class="case-study-heading-row">
+            <div>
+              <p class="case-study-kicker">Testing + Hardening</p>
+              <h2 class="case-study-section-title" id="testing-heading">
+                Testing the analyzer, not just the happy path
+              </h2>
+            </div>
+
+            <p class="case-study-lead">
+              The project uses several layers of automated validation because a
+              spreadsheet checker is only useful if its own results are
+              dependable.
+            </p>
+          </div>
+
+          <ul class="case-study-checks">
+            <li>pytest coverage for analyzer and application behavior</li>
+            <li>Seeded workbooks with intentional defects for benchmark checks</li>
+            <li>Clean-workbook controls to watch false-positive behavior</li>
+            <li>Pinned public workbook regressions across multiple use cases</li>
+            <li>Real Chromium browser tests for upload and report workflows</li>
+            <li>CSV and JSON download tests</li>
+            <li>Ruff and dependency auditing in continuous integration</li>
+            <li>Performance profiling for formula-heavy workbooks</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="case-study-section" aria-labelledby="privacy-heading">
+        <div class="section-marker" aria-hidden="true">
+          <span class="section-marker-number">06</span>
+          <span class="section-marker-label">Privacy</span>
+        </div>
+
+        <div class="case-study-section-content">
+          <div class="case-study-heading-row">
+            <div>
+              <p class="case-study-kicker">Privacy + Security</p>
+              <h2 class="case-study-section-title" id="privacy-heading">
+                Treat uploaded files as untrusted input
+              </h2>
+            </div>
+
+            <p class="case-study-lead">
+              Workbooks are processed for the request without an account or
+              workbook-history feature. File parsing and output paths are
+              hardened around the fact that uploaded spreadsheets are untrusted.
+            </p>
+          </div>
+
+          <ul class="case-study-checks">
+            <li>VBA is inventoried but never executed</li>
+            <li>Referenced external workbooks are never fetched</li>
+            <li>Hardened XML parsing uses defusedxml</li>
+            <li>Analysis responses use no-store browser caching</li>
+            <li>CSV exports guard against formula injection</li>
+            <li>Content Security Policy and related browser headers are applied</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="case-study-section" aria-labelledby="result-heading">
+        <div class="section-marker" aria-hidden="true">
+          <span class="section-marker-number">07</span>
+          <span class="section-marker-label">Result</span>
+        </div>
+
+        <div class="case-study-section-content">
+          <div class="case-study-heading-row">
+            <div>
+              <p class="case-study-kicker">The Result</p>
+              <h2 class="case-study-section-title" id="result-heading">
+                A small application with a clear job to do
+              </h2>
+            </div>
+
+            <p class="case-study-lead">
+              Spreadsheet Checkup is intentionally narrower than a traditional
+              full-stack portfolio app. That makes the engineering choices,
+              testing strategy, and value of the product easier to understand.
+            </p>
+          </div>
+
+          <div class="case-study-status-grid">
+            <article class="case-study-status-card">
+              <h3>What it demonstrates</h3>
+              <p>
+                Python, FastAPI, file processing, openpyxl, defensive parsing,
+                API design, automated testing, browser testing, performance
+                profiling, security hardening, and Render deployment.
+              </p>
+            </article>
+
+            <article class="case-study-status-card">
+              <h3>What I focused on</h3>
+              <p>
+                I prioritized useful findings and false-positive control over
+                simply increasing the number of checks. The goal is a report
+                someone can actually act on.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="case-study-next">
+        <p>Next case study</p>
+        <a href="dan-ross-portfolio.html">
+          Dan Ross Portfolio
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Dan Ross</p>
+      <p>Built with HTML, CSS &amp; Coffee</p>
+    </footer>
+
+    <a class="back-to-top" href="#top" aria-label="Back to top">
+      <span aria-hidden="true">↑</span>
+    </a>
+
+    <!-- htmlhint-disable attr-value-double-quotes -->
+    <!-- Cloudflare Web Analytics -->
+    <script
+      type="module"
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token":"810c27ea24e74a5a8861d5052f84c1c4"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
+    <!-- htmlhint-enable -->
+  </body>
+</html>
