@@ -18,7 +18,7 @@ approach to development and accessibility.
 - Dan Ross Portfolio
 
 Each featured project includes a case study covering the project goals,
-implementation, accessibility considerations, and results.
+implementation, engineering decisions, testing, and results.
 
 ## Built With
 
