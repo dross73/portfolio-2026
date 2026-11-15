@@ -53,10 +53,37 @@ const tableBody = document.querySelector('tbody');
 
 const reviewOnlyCheckbox = document.querySelector('#review-only');
 
+const sortOrderIdButton = document.querySelector('#sort-order-id');
+
+const sortOrderIdHeader = sortOrderIdButton.closest('th');
+
+const sortOrderIdIndicator = document.querySelector('#sort-order-id-indicator');
+
+// Remember the current sorting direction
+let sortDirection = 'none';
+
+// Handle clicks on the Order ID column's sort button.
+sortOrderIdButton.addEventListener('click', () => {
+  if (sortDirection === 'asc') {
+    sortDirection = 'desc';
+    sortOrderIdIndicator.textContent = '↓';
+    sortOrderIdHeader.setAttribute('aria-sort', 'descending');
+  } else {
+    sortDirection = 'asc';
+    sortOrderIdIndicator.textContent = '↑';
+    sortOrderIdHeader.setAttribute('aria-sort', 'ascending');
+  }
+  const ordersToSort = reviewOnlyCheckbox.checked ? reviewOrders : orders;
+  const sortedOrders = sortOrders(ordersToSort);
+
+  renderOrders(sortedOrders);
+});
+
 // Update the displayed orders when the review-only checkbox changes.
 reviewOnlyCheckbox.addEventListener('change', (event) => {
   const ordersToDisplay = event.target.checked ? reviewOrders : orders;
-  renderOrders(ordersToDisplay);
+  const sortedOrders = sortOrders(ordersToDisplay);
+  renderOrders(sortedOrders);
 });
 
 /**
@@ -160,6 +187,24 @@ function renderOrders(ordersToDisplay) {
     // Add the completed row to the table.
     tableBody.appendChild(row);
   }
+}
+
+/**
+ * Sorts a copy of the provided orders by ID using the current sort direction.
+ * Preserves the original array and the order objects it contains.
+ *
+ * @param {Order[]} ordersToSort - The orders to sort.
+ * @returns {Order[]} A new array sorted by ID, or in its original
+ * order if no sorting direction is selected.
+ */
+function sortOrders(ordersToSort) {
+  const sortedOrders = [...ordersToSort];
+  if (sortDirection === 'asc') {
+    sortedOrders.sort((a, b) => a.id - b.id);
+  } else if (sortDirection === 'desc') {
+    sortedOrders.sort((a, b) => b.id - a.id);
+  }
+  return sortedOrders;
 }
 
 renderOrders(orders);
